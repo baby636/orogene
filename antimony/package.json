@@ -7,13 +7,16 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "tauri:build": "vue-cli-service tauri:build",
-    "tauri:serve": "vue-cli-service tauri:serve"
+    "tauri:serve": "vue-cli-service tauri:serve",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "tauri": "^0.12.0",
     "vue": "^3.0.0-0",
-    "vue-router": "^4.0.0-beta.7"
+    "vue-router": "^4.0.0-beta.7",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.33.0",
@@ -32,7 +35,7 @@
     "eslint-plugin-vue": "^7.0.0-0",
     "prettier": "^2.0.5",
     "typescript": "~3.9.3",
-    "vue-cli-plugin-tauri": "^0.11.1"
+    "vue-cli-plugin-tauri": "^0.12.0"
   },
   "eslintConfig": {
     "root": true,
@@ -61,5 +64,6 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "snyk": true
 }
