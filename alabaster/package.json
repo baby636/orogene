@@ -8,7 +8,9 @@
     "build": "webpack --entry ./src/index.js --mode production --target node -o dist/alabaster.js",
     "check": "prettier -c ./src/**",
     "clean": "rimraf dist",
-    "format": "prettier --write ./src/**"
+    "format": "prettier --write ./src/**",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "prettier": "^1.18.2",
@@ -19,6 +21,8 @@
   "dependencies": {
     "@babel/core": "^7.11.0",
     "@babel/plugin-transform-react-jsx": "^7.10.0",
-    "@babel/plugin-transform-typescript": "^7.11.0"
-  }
+    "@babel/plugin-transform-typescript": "^7.11.0",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
